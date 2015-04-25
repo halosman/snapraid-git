@@ -1,4 +1,4 @@
-install {
+post_install() {
    echo "If this is your first time installing snapraid"
    echo "then please copy /etc/snapraid.conf.example to /etc/snapraid.conf"
    echo "and make your changes. See http://snapraid.sourceforge.net/manual.html"

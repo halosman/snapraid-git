@@ -14,3 +14,9 @@ Makefile.in
 /stamp-h1
 
 *~
+
+# Files downloaded by Makepkg
+snapraid/*
+pkg/*
+src/*
+*.pkg.tar.xz
