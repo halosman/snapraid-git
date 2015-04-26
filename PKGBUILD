@@ -3,12 +3,13 @@
 pkgname=snapraid-git
 _gitname=snapraid
 pkgver=v8.0.r0.g2c4321d
-pkgrel=1
-pkgdesc="SnapRAID is a backup program for disk arrays. It stores parity information of your data and it recovers from up to six disk failures."
+pkgrel=2
+pkgdesc="Latest snapRAID git commit"
 url="http://snapraid.sourceforge.net/"
 arch=('x86_64' 'i686')
 license=('GPL3')
 depends=('glibc')
+optdepends=('smartmontools: SMART Support')
 makedepends=('git' 'autoconf')
 conflicts=('snapraid')
 install='snapraid.install'

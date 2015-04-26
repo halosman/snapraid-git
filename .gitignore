@@ -19,4 +19,5 @@ Makefile.in
 snapraid/*
 pkg/*
 src/*
-*.pkg.tar.xz
+*.tar.xz
+*.tar.gz
