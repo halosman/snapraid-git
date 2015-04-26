@@ -26,10 +26,10 @@ build() {
    cd ${_gitname}
    
    # Generate config file
-   ./autogen.sh
+   ./autogen.sh || return 1
 
-   ./configure --prefix=/usr
-   make
+   ./configure --prefix=/usr || return 1
+   make || return 1
 }
 
 check() {
@@ -40,7 +40,7 @@ check() {
 package() {
    cd ${_gitname}
  
-   make DESTDIR="${pkgdir}/" prefix="/usr" mandir="/usr/share/man" install
+   make DESTDIR="${pkgdir}/" prefix="/usr" mandir="/usr/share/man" install || return 1
  
    install -D -m 644 snapraid.conf.example ${pkgdir}/usr/share/${_gitname}/snapraid.conf.example
     
